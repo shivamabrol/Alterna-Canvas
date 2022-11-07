@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export class NewsItem extends Component {
+export class Course extends Component {
   //Use states when we want to dynamically change variables
   //Props are read only
   constructor() {
@@ -26,4 +26,4 @@ export class NewsItem extends Component {
   }
 }
 
-export default NewsItem;
+export default Course;

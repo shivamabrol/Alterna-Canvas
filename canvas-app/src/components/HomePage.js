@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import NewsItem from "./NewsItem";
+import Course from "./Course";
 
-export class News extends Component {
+export class HomePage extends Component {
   articles = [
     {
       source: { id: "news24", name: "News24" },
@@ -58,7 +58,7 @@ export class News extends Component {
           {this.state.articles.map((element) => {
             return (
               <div className="col" key={element.url}>
-                <NewsItem
+                <Course
                   title={element.title}
                   description={element.description}
                   imageUrl={element.urlToImage}
@@ -73,4 +73,4 @@ export class News extends Component {
   }
 }
 
-export default News;
+export default HomePage;
