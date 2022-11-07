@@ -1,42 +1,34 @@
 import React, { Component } from "react";
-import { DayPilot, DayPilotCalendar } from "daypilot-pro-react";
+import {
+  DayPilot,
+  DayPilotCalendar,
+  DayPilotNavigator,
+} from "daypilot-pro-react";
 
 class Calendar extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      startDate: "2022-07-12",
-      viewType: "Resources",
-      columns: [
-        { name: "Resource 1", id: "R1" },
-        { name: "Resource 2", id: "R2" },
-        { name: "Resource 3", id: "R3" },
-        { name: "Resource 4", id: "R4" },
-        { name: "Resource 5", id: "R5" },
-      ],
-      events: [
-        {
-          id: 1,
-          text: "Event 1",
-          start: "2022-07-22T10:00:00",
-          end: "2022-07-22T14:00:00",
-          resource: "R2",
-        },
-      ],
-    };
+    this.calendarRef = React.createRef();
+  }
+
+  get calendar() {
+    return this.calendarRef.current.control;
   }
 
   render() {
-    const { ...config } = this.state;
     return (
-      <div>
-        <DayPilotCalendar
-          {...config}
-          ref={(component) => {
-            this.calendar = component && component.control;
-          }}
-        />
-      </div>
+      <DayPilotCalendar
+        viewType={"Week"}
+        onTimeRangeSelected={(args) => {
+          this.calendar.message(
+            "Selected range: " +
+              args.start.toString("hh:mm tt") +
+              " - " +
+              args.end.toString("hh:mm tt")
+          );
+        }}
+        ref={this.calendarRef}
+      />
     );
   }
 }

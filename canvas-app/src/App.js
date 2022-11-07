@@ -5,15 +5,16 @@ import DatePicker from "react-date-picker";
 import { HomePage } from "./components/HomePage";
 import { DayPilotScheduler } from "daypilot-pro-react";
 import Calendar from "./components/calendar.js";
+import Scheduler from "./components/scheduler";
 
 export default class App extends Component {
-  c = "Var";
   render() {
     return (
       <div>
-        <Navbar />
-        <HomePage />
+        {/* <Navbar />
+        <HomePage /> */}
         {/* <Calendar /> */}
+        <Scheduler />
       </div>
     );
   }
