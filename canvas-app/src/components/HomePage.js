@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import Course from "./Course";
+import CourseCard from "./CourseCard";
 
 export class HomePage extends Component {
-  articles = [
+  courses = [
     {
-      source: { id: "news24", name: "News24" },
-      author: "Sibusiso Mjikeliso",
       title: "Computer Graphics",
-      description: "UC2022-CG",
+      code: "UC2022-CG",
+      room: "812b Rhodes",
+      time: "MWF 4:30-5:20pm",
+      professor: "Dr. Jillian Aurisano",
       url:
         "/Users/shivamabrol/Desktop/course-data/computer_graphics/pages/08.html",
       urlToImage:
@@ -17,10 +18,11 @@ export class HomePage extends Component {
         '<ul><li>Cricket South Africa has committed to "getting to the bottom" of Enoch Nkwe\'s sudden resignation as Proteas assistant coach. </li><li>Nkwe voiced concerns with the current culture and working… [+3497 chars]',
     },
     {
-      source: { id: "abc-news-au", name: "ABC News (AU)" },
-      author: "ABC News",
       title: "Senior Design",
-      description: "UC2022-SD",
+      code: "UC2022-SD",
+      room: "812 Rhodes",
+      time: "T 12:00-3:00pm",
+      professor: "Dr. Jillian Aurisano",
       url:
         "http://www.abc.net.au/news/2021-08-26/england-cricket-great-ted-dexter-dies-aged-86/100411276",
       urlToImage:
@@ -30,10 +32,11 @@ export class HomePage extends Component {
         "Former England captain Ted Dexter has died aged 86 following a recent illness.\r\n<ul><li>Dexter played 62 Tests for England and was captain on 30 occasions</li><li>He was inducted into the ICC Hall of… [+1746 chars]",
     },
     {
-      source: { id: "espn-cric-info", name: "ESPN Cric Info" },
-      author: null,
-      title: "UI",
-      description: "UC2022-UI",
+      title: "User Interface Design",
+      code: "UC2022-UI",
+      room: "661 Baldwin",
+      time: "MWF 1:25-2:20pm",
+      professor: "Dr. Jillian Aurisano",
       url:
         "http://www.espncricinfo.com/story/_/id/29103103/pcb-hands-umar-akmal-three-year-ban-all-cricket",
       urlToImage:
@@ -46,7 +49,7 @@ export class HomePage extends Component {
   constructor() {
     super();
     this.state = {
-      articles: this.articles,
+      courses: this.courses,
       loading: false,
     };
   }
@@ -55,12 +58,15 @@ export class HomePage extends Component {
       <div className="container mx-15 ">
         <h2>Courses Fall'22</h2>
         <div className="row">
-          {this.state.articles.map((element) => {
+          {this.state.courses.map((element) => {
             return (
               <div className="col" key={element.url}>
-                <Course
+                <CourseCard
                   title={element.title}
-                  description={element.description}
+                  code={element.code}
+                  room={element.room}
+                  time={element.time}
+                  professor={element.professor}
                   imageUrl={element.urlToImage}
                   url={element.url}
                 />
