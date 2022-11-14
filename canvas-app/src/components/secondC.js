@@ -773,7 +773,7 @@ const defaultEvents = [
   },
 
   {
-    name: "module1",
+    description: "module1",
     folder: "na",
     type: "module",
     grading: "na",
@@ -785,7 +785,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "01.pptx",
+    description: "01.pptx",
     folder: "presentations",
     type: "lecture",
     grading: "partitipation",
@@ -797,7 +797,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "module2",
+    description: "module2",
     folder: "na",
     type: "module",
     grading: "na",
@@ -809,7 +809,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "02.pptx",
+    description: "02.pptx",
     folder: "presentations",
     type: "lecture",
     grading: "partitipation",
@@ -821,7 +821,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "module3",
+    description: "module3",
     folder: "na",
     type: "module",
     grading: "na",
@@ -833,7 +833,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "03.pptx",
+    description: "03.pptx",
     folder: "presentations",
     type: "lecture",
     grading: "partitipation",
@@ -845,7 +845,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "assignment_01.html",
+    description: "assignment_01.html",
     folder: "assignment",
     type: "assignment",
     grading: "assignment",
@@ -857,7 +857,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "module4",
+    description: "module4",
     folder: "na",
     type: "module",
     grading: "na",
@@ -869,7 +869,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "04.pptx",
+    description: "04.pptx",
     folder: "presentations",
     type: "lecture",
     grading: "partitipation",
@@ -881,7 +881,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "assignment_02.html",
+    description: "assignment_02.html",
     folder: "assignment",
     type: "assignment",
     grading: "assignment",
@@ -893,7 +893,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "module5",
+    description: "module5",
     folder: "na",
     type: "module",
     grading: "na",
@@ -905,7 +905,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "05.pptx",
+    description: "05.pptx",
     folder: "presentations",
     type: "lecture",
     grading: "partitipation",
@@ -917,7 +917,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "assignment_03.html",
+    description: "assignment_03.html",
     folder: "assignment",
     type: "assignment",
     grading: "assignment",
@@ -929,7 +929,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "module6",
+    description: "module6",
     folder: "na",
     type: "module",
     grading: "na",
@@ -941,7 +941,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "06.pptx",
+    description: "06.pptx",
     folder: "presentations",
     type: "lecture",
     grading: "partitipation",
@@ -953,7 +953,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "assignment_04.html",
+    description: "assignment_04.html",
     folder: "assignment",
     type: "assignment",
     grading: "assignment",
@@ -965,7 +965,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "module7",
+    description: "module7",
     folder: "na",
     type: "module",
     grading: "na",
@@ -977,7 +977,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "07.pptx",
+    description: "07.pptx",
     folder: "presentations",
     type: "lecture",
     grading: "partitipation",
@@ -989,7 +989,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "assignment_05.html",
+    description: "assignment_05.html",
     folder: "assignment",
     type: "assignment",
     grading: "assignment",
@@ -1001,7 +1001,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "module8",
+    description: "module8",
     folder: "na",
     type: "module",
     grading: "na",
@@ -1013,7 +1013,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "08.pptx",
+    description: "08.pptx",
     folder: "presentations",
     type: "lecture",
     grading: "partitipation",
@@ -1025,7 +1025,7 @@ const defaultEvents = [
     reference: "na",
   },
   {
-    name: "assignment_06.html",
+    description: "assignment_06.html",
     folder: "assignment",
     type: "assignment",
     grading: "assignment",
