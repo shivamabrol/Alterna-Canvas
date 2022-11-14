@@ -9,7 +9,7 @@ export class HomePage extends Component {
       room: "812b Rhodes",
       time: "MWF 4:30-5:20pm",
       professor: "Dr. Jillian Aurisano",
-      url: "/calendar",
+      url: "/secondC",
       urlToImage:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtmSe_SYl6R_HqZ0IEMu--wxj46A4MCXe6LQ&usqp=CAU",
     },

@@ -1,5 +1,5 @@
 import React from "react";
-import "@mobiscroll/react/dist/css/mobiscroll.min.css";
+
 import {
   Eventcalendar,
   snackbar,
@@ -16,47 +16,66 @@ import {
 
 setOptions({
   theme: "ios",
-  themeVariant: "dark",
+  themeVariant: "light",
 });
 
+const now = new Date();
 const defaultEvents = [
   {
     id: 4,
 
-    start: "2022-08-10T10:30",
-    end: "2022-08-10T11:30",
-    title: "Stakeholder mtg.",
+    start: "2022-08-10T16:30",
+    end: "2022-08-10T17:20",
+    title: "Computer Graphics",
     description: "",
     // allDay: false,
     free: false,
     recurring: {
       repeat: "weekly",
-      weekDays: "MO",
+      weekDays: "MO, WE, FR",
     },
-    color: "#f44437",
+    color: "green",
   },
 
-  //
   {
-    id: "syllabus.html",
-    folder: "course_info",
-    type: "syllabus",
-    grading: "participation",
-    points: "na",
-    allDay: true,
-    start: "8/15/22",
-    end: "12/9/22",
-    module: "none",
-    title: "Syllabus",
-    reference: "na",
+    id: 4,
+
+    start: "2022-08-10T12:00",
+    end: "2022-08-10T15:00",
+    title: "Senior Design",
+    description: "",
+    // allDay: false,
+    free: false,
+    recurring: {
+      repeat: "weekly",
+      weekDays: "TU",
+    },
+    color: "yellow",
   },
+  {
+    id: 4,
+
+    start: "2022-08-10T13:25",
+    end: "2022-08-10T14:20",
+    title: "User Interface Design",
+    description: "",
+    // allDay: false,
+    free: false,
+    recurring: {
+      repeat: "weekly",
+      weekDays: "MO, WE, FR",
+    },
+    color: "cyan",
+  },
+  //
+
   {
     id: "module1",
     folder: "na",
     type: "module",
     grading: "na",
     points: "na",
-    allDay: true,
+    // allDay: true,
     start: "8/22/22",
     end: "8/26/22",
     module: "module1",
@@ -69,7 +88,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "8/22/22",
     end: "8/22/22",
     module: "module1",
@@ -82,7 +101,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "8/24/22",
     end: "8/24/22",
     module: "module1",
@@ -95,7 +114,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "partitipation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "8/26/22",
     end: "8/26/22",
     module: "module1",
@@ -108,7 +127,7 @@ const defaultEvents = [
     type: "assignment",
     grading: "assignment",
     points: "10",
-    allDay: true,
+    // allDay: true,
     start: "8/15/22",
     end: "8/29/22",
     module: "module1",
@@ -121,7 +140,7 @@ const defaultEvents = [
     type: "module",
     grading: "na",
     points: "na",
-    allDay: true,
+    // allDay: true,
     start: "8/29/22",
     end: "9/2/22",
     module: "module2",
@@ -134,7 +153,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "8/29/31",
     end: "8/29/31",
     module: "module2",
@@ -147,7 +166,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "8/31/22",
     end: "8/31/22",
     module: "module2",
@@ -160,7 +179,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/2/22",
     end: "9/2/22",
     module: "module2",
@@ -173,7 +192,7 @@ const defaultEvents = [
     type: "inclass",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "8/29/31",
     end: "8/29/31",
     module: "module2",
@@ -186,7 +205,7 @@ const defaultEvents = [
     type: "inclass",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "8/29/31",
     end: "8/29/31",
     module: "module2",
@@ -199,7 +218,7 @@ const defaultEvents = [
     type: "inclass",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "8/31/22",
     end: "8/31/22",
     module: "module2",
@@ -212,7 +231,7 @@ const defaultEvents = [
     type: "inclass",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "8/31/22",
     end: "8/31/22",
     module: "module2",
@@ -225,7 +244,7 @@ const defaultEvents = [
     type: "inclass",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/2/22",
     end: "9/2/22",
     module: "module2",
@@ -238,7 +257,7 @@ const defaultEvents = [
     type: "inclass",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/2/22",
     end: "9/2/22",
     module: "module2",
@@ -251,7 +270,7 @@ const defaultEvents = [
     type: "assignment",
     grading: "assignment",
     points: "10",
-    allDay: true,
+    // allDay: true,
     start: "9/2/22",
     end: "9/9/22",
     module: "module2",
@@ -264,7 +283,7 @@ const defaultEvents = [
     type: "module",
     grading: "na",
     points: "na",
-    allDay: true,
+    // allDay: true,
     start: "9/7/22",
     end: "9/7/22",
     module: "module3",
@@ -277,7 +296,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/7/22",
     end: "9/7/22",
     module: "module3",
@@ -290,7 +309,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/9/22",
     end: "9/9/22",
     module: "module3",
@@ -303,7 +322,7 @@ const defaultEvents = [
     type: "inclass",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/7/22",
     end: "9/7/22",
     module: "module3",
@@ -316,7 +335,7 @@ const defaultEvents = [
     type: "inclass",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/7/22",
     end: "9/7/22",
     module: "module3",
@@ -329,7 +348,7 @@ const defaultEvents = [
     type: "inclass",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/7/22",
     end: "9/7/22",
     module: "module3",
@@ -342,7 +361,7 @@ const defaultEvents = [
     type: "inclass",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/9/22",
     end: "9/9/22",
     module: "module3",
@@ -355,7 +374,7 @@ const defaultEvents = [
     type: "inclass",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/9/22",
     end: "9/9/22",
     module: "module3",
@@ -368,7 +387,7 @@ const defaultEvents = [
     type: "inclass",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/9/22",
     end: "9/9/22",
     module: "module3",
@@ -381,7 +400,7 @@ const defaultEvents = [
     type: "assignment",
     grading: "assignment",
     points: "10",
-    allDay: true,
+    // allDay: true,
     start: "9/9/22",
     end: "9/26/22",
     module: "module3",
@@ -394,7 +413,7 @@ const defaultEvents = [
     type: "module",
     grading: "na",
     points: "na",
-    allDay: true,
+    // allDay: true,
     start: "9/12/22",
     end: "9/16/22",
     module: "module4",
@@ -407,7 +426,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/12/22",
     end: "9/12/22",
     module: "module4",
@@ -420,7 +439,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/14/22",
     end: "9/14/22",
     module: "module4",
@@ -433,7 +452,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/16/22",
     end: "9/16/22",
     module: "module4",
@@ -446,7 +465,7 @@ const defaultEvents = [
     type: "inclass",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/12/22",
     end: "9/12/22",
     module: "module4",
@@ -459,7 +478,7 @@ const defaultEvents = [
     type: "inclass",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/12/22",
     end: "9/12/22",
     module: "module4",
@@ -472,7 +491,7 @@ const defaultEvents = [
     type: "inclass",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/14/22",
     end: "9/14/22",
     module: "module4",
@@ -485,7 +504,7 @@ const defaultEvents = [
     type: "inclass",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/16/22",
     end: "9/16/22",
     module: "module4",
@@ -498,7 +517,7 @@ const defaultEvents = [
     type: "assignment",
     grading: "assignment",
     points: "10",
-    allDay: true,
+    // allDay: true,
     start: "9/16/22",
     end: "9/23/22",
     module: "module4",
@@ -511,7 +530,7 @@ const defaultEvents = [
     type: "module",
     grading: "na",
     points: "na",
-    allDay: true,
+    // allDay: true,
     start: "9/19/22",
     end: "9/23/22",
     module: "module5",
@@ -524,7 +543,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/19/22",
     end: "9/19/22",
     module: "module5",
@@ -537,7 +556,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/21/22",
     end: "9/21/22",
     module: "module5",
@@ -550,7 +569,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/23/22",
     end: "9/23/22",
     module: "module5",
@@ -563,7 +582,7 @@ const defaultEvents = [
     type: "assignment",
     grading: "assignment",
     points: "10",
-    allDay: true,
+    // allDay: true,
     start: "9/23/22",
     end: "9/30/22",
     module: "module5",
@@ -576,7 +595,7 @@ const defaultEvents = [
     type: "module",
     grading: "na",
     points: "na",
-    allDay: true,
+    // allDay: true,
     start: "9/26/22",
     end: "9/30/22",
     module: "module6",
@@ -589,7 +608,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/26/22",
     end: "9/26/22",
     module: "module6",
@@ -602,7 +621,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/28/22",
     end: "9/28/22",
     module: "module6",
@@ -615,7 +634,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "9/30/22",
     end: "9/30/22",
     module: "module6",
@@ -628,7 +647,7 @@ const defaultEvents = [
     type: "assignment",
     grading: "assignment",
     points: "10",
-    allDay: true,
+    // allDay: true,
     start: "9/30/22",
     end: "10/5/22",
     module: "module5",
@@ -641,7 +660,7 @@ const defaultEvents = [
     type: "module",
     grading: "na",
     points: "na",
-    allDay: true,
+    // allDay: true,
     start: "10/3/22",
     end: "10/14/22",
     module: "module7",
@@ -654,7 +673,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "10/3/22",
     end: "10/3/22",
     module: "module7",
@@ -667,7 +686,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "10/5/22",
     end: "10/5/22",
     module: "module7",
@@ -680,7 +699,7 @@ const defaultEvents = [
     type: "assifgnment",
     grading: "assignment",
     points: "10",
-    allDay: true,
+    // allDay: true,
     start: "10/5/22",
     end: "10/14/22",
     module: "na",
@@ -693,7 +712,7 @@ const defaultEvents = [
     type: "module",
     grading: "na",
     points: "na",
-    allDay: true,
+    // allDay: true,
     start: "10/12/22",
     end: "10/16/22",
     module: "module8",
@@ -706,7 +725,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "10/12/22",
     end: "10/12/22",
     module: "module8",
@@ -719,7 +738,7 @@ const defaultEvents = [
     type: "lecture",
     grading: "participation",
     points: "1",
-    allDay: true,
+    // allDay: true,
     start: "10/14/22",
     end: "10/14/22",
     module: "module8",
@@ -732,7 +751,7 @@ const defaultEvents = [
     type: "assignment",
     grading: "assignment",
     points: "10",
-    allDay: true,
+    // allDay: true,
     start: "10/14/22",
     end: "10/26/22",
     module: "module8",
@@ -745,31 +764,20 @@ const defaultEvents = [
     type: "exams",
     grading: "exams",
     points: "100",
-    allDay: true,
+    // allDay: true,
     start: "10/26/22",
     end: "10/26/22",
     module: "module8",
     title: "Midterm exam",
     reference: "na",
   },
-  {
-    name: "syllabus.html",
-    folder: "course_info",
-    type: "syllabus",
-    grading: "participation",
-    allDay: true,
-    start: "8/15/22",
-    end: "12/9/22",
-    module: "none",
-    title: "Syllabus",
-    reference: "na",
-  },
+
   {
     name: "module1",
     folder: "na",
     type: "module",
     grading: "na",
-    allDay: true,
+    // allDay: true,
     start: "8/22/22",
     end: "8/26/22",
     module: "module1",
@@ -781,7 +789,7 @@ const defaultEvents = [
     folder: "presentations",
     type: "lecture",
     grading: "partitipation",
-    allDay: true,
+    // allDay: true,
     start: "8/26/22",
     end: "8/26/22",
     module: "module1",
@@ -793,7 +801,7 @@ const defaultEvents = [
     folder: "na",
     type: "module",
     grading: "na",
-    allDay: true,
+    // allDay: true,
     start: "8/29/22",
     end: "9/2/22",
     module: "module2",
@@ -805,7 +813,7 @@ const defaultEvents = [
     folder: "presentations",
     type: "lecture",
     grading: "partitipation",
-    allDay: true,
+    // allDay: true,
     start: "8/26/22",
     end: "8/26/22",
     module: "module1",
@@ -817,7 +825,7 @@ const defaultEvents = [
     folder: "na",
     type: "module",
     grading: "na",
-    allDay: true,
+    // allDay: true,
     start: "9/7/22",
     end: "9/7/22",
     module: "module3",
@@ -829,7 +837,7 @@ const defaultEvents = [
     folder: "presentations",
     type: "lecture",
     grading: "partitipation",
-    allDay: true,
+    // allDay: true,
     start: "8/26/22",
     end: "8/26/22",
     module: "module1",
@@ -841,7 +849,7 @@ const defaultEvents = [
     folder: "assignment",
     type: "assignment",
     grading: "assignment",
-    allDay: true,
+    // allDay: true,
     start: "8/15/22",
     end: "8/29/22",
     module: "module1",
@@ -853,7 +861,7 @@ const defaultEvents = [
     folder: "na",
     type: "module",
     grading: "na",
-    allDay: true,
+    // allDay: true,
     start: "9/12/22",
     end: "9/16/22",
     module: "module4",
@@ -865,7 +873,7 @@ const defaultEvents = [
     folder: "presentations",
     type: "lecture",
     grading: "partitipation",
-    allDay: true,
+    // allDay: true,
     start: "8/26/22",
     end: "8/26/22",
     module: "module1",
@@ -877,7 +885,7 @@ const defaultEvents = [
     folder: "assignment",
     type: "assignment",
     grading: "assignment",
-    allDay: true,
+    // allDay: true,
     start: "8/15/22",
     end: "8/29/22",
     module: "module1",
@@ -889,7 +897,7 @@ const defaultEvents = [
     folder: "na",
     type: "module",
     grading: "na",
-    allDay: true,
+    // allDay: true,
     start: "9/19/22",
     end: "9/23/22",
     module: "module5",
@@ -901,7 +909,7 @@ const defaultEvents = [
     folder: "presentations",
     type: "lecture",
     grading: "partitipation",
-    allDay: true,
+    // allDay: true,
     start: "8/26/22",
     end: "8/26/22",
     module: "module1",
@@ -913,7 +921,7 @@ const defaultEvents = [
     folder: "assignment",
     type: "assignment",
     grading: "assignment",
-    allDay: true,
+    // allDay: true,
     start: "8/15/22",
     end: "8/29/22",
     module: "module1",
@@ -925,7 +933,7 @@ const defaultEvents = [
     folder: "na",
     type: "module",
     grading: "na",
-    allDay: true,
+    // allDay: true,
     start: "9/26/22",
     end: "9/30/22",
     module: "module6",
@@ -937,7 +945,7 @@ const defaultEvents = [
     folder: "presentations",
     type: "lecture",
     grading: "partitipation",
-    allDay: true,
+    // allDay: true,
     start: "8/26/22",
     end: "8/26/22",
     module: "module1",
@@ -949,7 +957,7 @@ const defaultEvents = [
     folder: "assignment",
     type: "assignment",
     grading: "assignment",
-    allDay: true,
+    // allDay: true,
     start: "8/15/22",
     end: "8/29/22",
     module: "module1",
@@ -961,7 +969,7 @@ const defaultEvents = [
     folder: "na",
     type: "module",
     grading: "na",
-    allDay: true,
+    // allDay: true,
     start: "10/3/22",
     end: "10/14/22",
     module: "module7",
@@ -973,7 +981,7 @@ const defaultEvents = [
     folder: "presentations",
     type: "lecture",
     grading: "partitipation",
-    allDay: true,
+    // allDay: true,
     start: "8/26/22",
     end: "8/26/22",
     module: "module1",
@@ -985,7 +993,7 @@ const defaultEvents = [
     folder: "assignment",
     type: "assignment",
     grading: "assignment",
-    allDay: true,
+    // allDay: true,
     start: "8/15/22",
     end: "8/29/22",
     module: "module1",
@@ -997,7 +1005,7 @@ const defaultEvents = [
     folder: "na",
     type: "module",
     grading: "na",
-    allDay: true,
+    // allDay: true,
     start: "10/3/22",
     end: "10/14/22",
     module: "module7",
@@ -1009,7 +1017,7 @@ const defaultEvents = [
     folder: "presentations",
     type: "lecture",
     grading: "partitipation",
-    allDay: true,
+    // allDay: true,
     start: "8/26/22",
     end: "8/26/22",
     module: "module1",
@@ -1021,7 +1029,7 @@ const defaultEvents = [
     folder: "assignment",
     type: "assignment",
     grading: "assignment",
-    allDay: true,
+    // allDay: true,
     start: "8/15/22",
     end: "8/29/22",
     module: "module1",
@@ -1029,8 +1037,9 @@ const defaultEvents = [
     reference: "na",
   },
 ];
+
 const viewSettings = {
-  schedule: { type: "month" },
+  calendar: { labels: true },
 };
 const responsivePopup = {
   medium: {
@@ -1060,7 +1069,7 @@ const colors = [
   "#7e5d4e",
 ];
 
-function App() {
+function SeconC() {
   const [myEvents, setMyEvents] = React.useState(defaultEvents);
   const [tempEvent, setTempEvent] = React.useState(null);
   const [isOpen, setOpen] = React.useState(false);
@@ -1073,26 +1082,27 @@ function App() {
   const [popupEventAllDay, setAllDay] = React.useState(true);
   const [popupEventDate, setDate] = React.useState([]);
   const [popupEventStatus, setStatus] = React.useState("busy");
-  const [mySelectedDate, setSelectedDate] = React.useState(new Date());
+  const [mySelectedDate, setSelectedDate] = React.useState(now);
   const [colorPickerOpen, setColorPickerOpen] = React.useState(false);
   const [colorAnchor, setColorAnchor] = React.useState(null);
   const [selectedColor, setSelectedColor] = React.useState("");
   const [tempColor, setTempColor] = React.useState("");
   const colorPicker = React.useRef();
-  const colorButtons = React.useMemo(() => {
-    return [
+  const colorButtons = React.useMemo(
+    () => [
       "cancel",
       {
+        text: "Set",
+        keyCode: "enter",
         handler: () => {
           setSelectedColor(tempColor);
           setColorPickerOpen(false);
         },
-        keyCode: "enter",
-        text: "Save",
         cssClass: "mbsc-popup-button-primary",
       },
-    ];
-  }, [tempColor]);
+    ],
+    [tempColor]
+  );
 
   const saveEvent = React.useCallback(() => {
     const newEvent = {
@@ -1103,6 +1113,7 @@ function App() {
       end: popupEventDate[1],
       allDay: popupEventAllDay,
       status: popupEventStatus,
+      color: tempEvent.color,
       color: selectedColor,
     };
     if (isEdit) {
@@ -1193,7 +1204,7 @@ function App() {
 
   const onSelectedDateChange = React.useCallback((event) => {
     setSelectedDate(event.date);
-  }, []);
+  });
 
   const onEventClick = React.useCallback(
     (args) => {
@@ -1209,6 +1220,7 @@ function App() {
 
   const onEventCreated = React.useCallback(
     (args) => {
+      // createNewEvent(args.event, args.target)
       setEdit(false);
       setTempEvent(args.event);
       // fill popup form with event data
@@ -1237,7 +1249,7 @@ function App() {
     () => (popupEventAllDay ? ["date"] : ["datetime"]),
     [popupEventAllDay]
   );
-  const responsiveOptions = React.useMemo(
+  const respSetting = React.useMemo(
     () =>
       popupEventAllDay
         ? {
@@ -1371,7 +1383,7 @@ function App() {
             startInput={start}
             endInput={end}
             showRangeLabels={false}
-            responsive={responsiveOptions}
+            responsive={respSetting}
             onChange={dateChange}
             value={popupEventDate}
           />
@@ -1390,7 +1402,7 @@ function App() {
               Show as free
             </SegmentedItem>
           </SegmentedGroup>
-          {isEdit && (
+          {isEdit ? (
             <div className="mbsc-button-group">
               <Button
                 className="mbsc-button-block"
@@ -1401,7 +1413,7 @@ function App() {
                 Delete event
               </Button>
             </div>
-          )}
+          ) : null}
         </div>
       </Popup>
       <Popup
@@ -1462,4 +1474,4 @@ function App() {
   );
 }
 
-export default App;
+export default SeconC;

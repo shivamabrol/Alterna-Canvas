@@ -7,6 +7,7 @@ import ToDo from "./components/ToDo";
 import HomePage from "./components/HomePage";
 import Calendar from "./components/calendar";
 import UserInterfaceHome from "./components/UserInterfaceHome";
+import SecondC from "./components/secondC";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/goals" element={<GoalPage />} />
           <Route path="/todo" element={<ToDo />} />
           <Route path="/UserInterfaceHome" element={<UserInterfaceHome />} />
+          <Route path="/secondC" element={<SecondC />} />
         </Routes>
       </Router>
     </>
