@@ -10,6 +10,9 @@ import UserInterfaceHome from "./components/UserInterfaceHome";
 import SecondC from "./components/secondC";
 import ComputerGraphicsHome from "./components/ComputerGraphicsHome";
 import SeniorDesignHome from "./components/SeniorDesignHome";
+import UIAssignments from "./components/UIAssignments";
+import SDAssignments from "./components/SDAssignments";
+import CGAssignments from "./components/CGAssignments";
 
 function App() {
     return (
@@ -33,6 +36,21 @@ function App() {
                     <Route
                         path="/SeniorDesignHome"
                         element={<SeniorDesignHome />}
+                    />
+                    <Route path="/ui-assignments" element={<UIAssignments />} />
+                    <Route
+                        path="/ui-resources"
+                        element={<UserInterfaceHome />}
+                    />
+                    <Route path="/sd-assignments" element={<SDAssignments />} />
+                    <Route
+                        path="/sd-resources"
+                        element={<SeniorDesignHome />}
+                    />
+                    <Route path="/cg-assignments" element={<CGAssignments />} />
+                    <Route
+                        path="/cg-resources"
+                        element={<ComputerGraphicsHome />}
                     />
                 </Routes>
             </Router>
