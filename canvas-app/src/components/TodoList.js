@@ -49,6 +49,7 @@ const TodoList = ({ todos, deleteTodo, changePriority }) => {
                         icon={<FaTrash />}
                         isRound="true"
                         onClick={() => deleteTodo(todo.id)}
+                        p={5}
                     />
                 </HStack>
             ))}

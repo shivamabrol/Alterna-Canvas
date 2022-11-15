@@ -13,6 +13,7 @@ import {
     Spacer,
     HStack,
 } from "@chakra-ui/react";
+import "../App.css";
 
 const CourseLabel = ({ id, course, changeCourse }) => {
     const [currCourse, setCourse] = useState(course);
@@ -38,22 +39,65 @@ const CourseLabel = ({ id, course, changeCourse }) => {
     }
 
     return (
-        <Popover>
+        <Popover placement="left">
             <PopoverTrigger>
-                <Avatar name={currCourse} />
+                <Avatar
+                    name={currCourse}
+                    p={3}
+                    _hover={{
+                        background: "#d1d1d1",
+                        cursor: "pointer",
+                    }}
+                />
             </PopoverTrigger>
             <PopoverContent>
                 <PopoverArrow />
                 <PopoverCloseButton />
                 <PopoverBody>
                     <HStack>
-                        <Avatar name={"None"} onClick={selectN} />
+                        <Avatar
+                            name={"None"}
+                            onClick={selectN}
+                            p={3}
+                            m={3}
+                            _hover={{
+                                background: "#d1d1d1",
+                                cursor: "pointer",
+                            }}
+                        />
                         <Spacer />
-                        <Avatar name={"Computer Graphics"} onClick={selectCG} />
+                        <Avatar
+                            name={"Computer Graphics"}
+                            onClick={selectCG}
+                            p={3}
+                            m={3}
+                            _hover={{
+                                background: "#d1d1d1",
+                                cursor: "pointer",
+                            }}
+                        />
                         <Spacer />
-                        <Avatar name={"Senior Design"} onClick={selectSD} />
+                        <Avatar
+                            name={"Senior Design"}
+                            onClick={selectSD}
+                            p={3}
+                            m={3}
+                            _hover={{
+                                background: "#d1d1d1",
+                                cursor: "pointer",
+                            }}
+                        />
                         <Spacer />
-                        <Avatar name={"User Interface"} onClick={selectUI} />
+                        <Avatar
+                            name={"User Interface"}
+                            onClick={selectUI}
+                            p={3}
+                            m={3}
+                            _hover={{
+                                background: "#d1d1d1",
+                                cursor: "pointer",
+                            }}
+                        />
                     </HStack>
                 </PopoverBody>
             </PopoverContent>
