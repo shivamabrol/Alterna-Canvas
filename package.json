@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "html-loader": "^4.2.0",
+    "jquery": "^3.6.1",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-pro-sidebar": "^1.0.0-alpha.7",
+    "react-router-dom": "^6.4.3"
+  }
+}

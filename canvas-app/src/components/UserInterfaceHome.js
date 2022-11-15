@@ -1,17 +1,15 @@
 import React from "react";
-import CourseSidebar from "./CourseSidebar";
+import UICourseSidebar from "./UICourseSidebar";
+import UISyllabus from "./UISyllabus";
 import Navbar from "./Navbar";
 
 const UserInterfaceHome = ({ children }) => {
     return (
         <div className="main">
-            <Navbar />
             <div className="page-wrapper">
-                <CourseSidebar />
-
-                    {children}
-
-
+                <UICourseSidebar />
+                <UISyllabus />
+                {children}
             </div>
         </div>
     );
