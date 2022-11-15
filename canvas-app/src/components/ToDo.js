@@ -1,16 +1,53 @@
-import React, { Component } from "react";
-
-function Welcome(props) {
-    return <h1>Hello, {props.name}</h1>;
-}
+import { VStack } from "@chakra-ui/react";
+import TodoList from "./TodoList";
+import AddTodo from "./AddTodo";
+import { useState, useEffect } from "react";
 
 function ToDo() {
+    const [todos, setTodos] = useState(
+        () => JSON.parse(localStorage.getItem("todos")) || []
+    );
+
+    useEffect(() => {
+        localStorage.setItem("todos", JSON.stringify(todos));
+        console.log(todos);
+    }, [todos]);
+
+    function deleteTodo(id) {
+        const newTodos = todos.filter((todo) => {
+            return todo.id !== id;
+        });
+        setTodos(newTodos);
+    }
+
+    function changePriority(id) {
+        let newTodos = todos;
+        for (let i = 0; i < newTodos.length; i++) {
+            let task = newTodos[i];
+            if (task.id == id) {
+                if (task.priority == "!!!") {
+                    task.priority = "!";
+                } else {
+                    task.priority += "!";
+                }
+            }
+        }
+        setTodos(newTodos);
+    }
+
+    function addTodo(todo) {
+        setTodos([...todos, todo]);
+    }
+
     return (
-        <div>
-            <Welcome name="Erin" />
-            <Welcome name="Shivam" />
-            <Welcome name="Christian" />
-        </div>
+        <VStack p="4">
+            <AddTodo addTodo={addTodo} />
+            <TodoList
+                todos={todos}
+                deleteTodo={deleteTodo}
+                changePriority={changePriority}
+            />
+        </VStack>
     );
 }
 export default ToDo;
