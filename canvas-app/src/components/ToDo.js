@@ -5,7 +5,39 @@ import { useState, useEffect } from "react";
 
 function ToDo() {
     const [todos, setTodos] = useState(
-        () => JSON.parse(localStorage.getItem("todos")) || []
+        () =>
+            JSON.parse(localStorage.getItem("todos")) || [
+                {
+                    id: 1,
+                    body: "Assignment 4",
+                    priority: "!!!",
+                    course: "User Interface",
+                },
+                {
+                    id: 2,
+                    body: "Midterm Exam",
+                    priority: "!!!",
+                    course: "Computer Graphics",
+                },
+                {
+                    id: 3,
+                    body: "Assignment 6",
+                    priority: "!!",
+                    course: "Computer Graphics",
+                },
+                {
+                    id: 4,
+                    body: "Assignment 3",
+                    priority: "!!",
+                    course: "Senior Design",
+                },
+                {
+                    id: 5,
+                    body: "Assignment 5",
+                    priority: "!",
+                    course: "User Interface",
+                },
+            ]
     );
 
     useEffect(() => {
